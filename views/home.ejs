@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz App</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Quiz Categories</h1>
+		<form action="quiz" method="POST">
+		<%for(var i=0;i < 15;i++){%>
+			<!--<a href="/<%=id[i]%>" id="<%=i%>"><%=categories[i]%></a><br>-->
+			<input type="Submit" id="<%=id[i]%>" formaction="<%=id[i]%>" value="<%=categories[i]%>"><br>
+		<%}%>
+	</form>
+</div>
+</body>
+</html>

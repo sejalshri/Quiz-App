@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quizzo</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" type="text/css" href="https://fontawesome.com/v4.7/icons/">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/start.css">
+	<script>
+		
+		var t=0;
+		var score=0;
+		var test='<%- JSON.stringify(list) %>';
+		var test1=JSON.parse(test);
+		window.onload=function(){
+			t=0;
+			score=0;
+			create(-1);
+		}
+		function create(i){
+			if(i==9){
+				alert('Your score is ' + score + '/10');
+				var para = document.createElement("a");
+				var node = document.createTextNode("Start Again :)");
+				para.appendChild(node);
+				var element = document.getElementById("main");
+				element.appendChild(para);
+				document.getElementsByTagName("a")[0].setAttribute("href","/");
+			}
+			else{
+			i=i+1;
+			t=i;
+			console.log(i);
+			var para = document.createElement("h2");
+			var node = document.createTextNode(test1[i].question.replace(/&quot;|&amp;|&#039;s|&#039;/g, ''));
+			para.appendChild(node);
+			var element = document.getElementById("main");
+			element.appendChild(para);
+
+
+			for(var j=0;j<test1[i].answers.length;j++){
+
+				var para = document.createElement("button");
+				var node = document.createTextNode(test1[i].answers[j].replace(/&quot;|&amp;|&#039;s|&#039;/g, ''));
+				para.appendChild(node);
+				var element = document.getElementById("main");
+				element.appendChild(para);
+				document.getElementsByTagName("button")[j].setAttribute("id",j.toString());
+			    document.getElementsByTagName("button")[j].setAttribute("onclick","check(t,this.id)");
+
+
+
+				var para = document.createElement("br");
+				var element = document.getElementById("main");
+				element.appendChild(para);
+
+				console.log(document.getElementsByTagName("button")[j]);
+
+			}
+		}
+		}
+
+		function check(m,k){
+			if(test1[m].answers[k]===test1[m].correct){
+				console.log("hurray");
+				score=score+1;
+				alert("Correct Answer");
+			}
+			else{
+				alert('Wrong.\nCorrect Answer: ' + test1[m].correct);
+			}
+			document.getElementById("main").innerHTML="";
+			create(m);
+		}
+	</script>
+	</head>
+<body>
+	<h1 style="text-align: center;">QUIZ</h1>
+	<div class="container" id="main">
+	</div>
+	<footer>
+      <p>Made by Sejal Srivastava</p>
+    <div id="icons">
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/sejal-srivastava-b155631a1" role="button"><i class="fa fa-linkedin"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/sejalshri" role="button"><i class="fa fa-github"></i></a>
+    </div>
+</footer>
+</body>
+</html>
+</body>
+</html>
