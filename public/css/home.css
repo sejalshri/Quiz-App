@@ -1,5 +1,5 @@
 body{
-	background-color: #053742;
+	background-color: #201f1d;
 }
 .container{
 	text-align: center;
@@ -8,18 +8,32 @@ h1{
 	color: #E8F0F2;
 	font-weight: bold;
 	margin: 20px;
+	text-shadow: 0px 4px 4px #de8d47;
 }
 input{
 	width: 50%;
 	padding: 15px;
-	margin: 10px;
-	border-radius: 25px;
+	background-color: #dcdcdc;
+	margin: 15px;
+	border-radius: 10px;
 	font-size: 20px;
 	font-weight: bold;
-	border:5px solid #39A2DB;
+	border-bottom:5px solid #DE8D47;
 }
 input:hover{
 	color: white;
-	background-color: #39A2DB;
-	font-size: 23px;
+	background-color: #de8d47;
+	border-radius: 25px;
+}
+
+@media only screen and (max-width: 768px)
+{
+	h1{
+		font-size: 20px;
+	}
+	input{
+		width: 80%;
+		font-size: 16px;
+		padding: 10px;
+	}
 }
