@@ -28,8 +28,13 @@ button{
 	font-weight: bold;
 	border-bottom:5px solid #de8d47;
 }
+button:hover{
+	color: white;
+	background-color: #de8d47;
+	border-radius: 25px;
+	outline: none;
+}
 #main a{
-	margin-top: 30px;
 	width: 50%;
 	text-decoration: none;
 	background-color:#dcdcdc;
@@ -37,6 +42,10 @@ button{
 	font-size: 20px;
 	font-weight: bold;
 	padding: 15px; 
+	color: black;
+	border-bottom:5px solid #de8d47;
+	position: relative;
+	top:50px;
 }
 button:hover,#main a:hover{
 	color: white;
@@ -67,7 +76,6 @@ footer p{
 		margin: 10px;
 	}
 	button{
-		margin-top: 
 		width:80%;
 		padding: 10px;
 		font-size: 16px;
