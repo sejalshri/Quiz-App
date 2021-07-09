@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="https://fontawesome.com/v4.7/icons/">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="css/start.css">
 	<script>
 		
@@ -37,7 +38,7 @@
 			t=i;
 			console.log(i);
 			var para = document.createElement("h2");
-			var node = document.createTextNode(test1[i].question.replace(/&quot;|&amp;|&#039;s|&#039;/g, ''));
+			var node = document.createTextNode((i+1).toString()+"/10- "+test1[i].question.replace(/&quot;|&amp;|&#039;s|&#039;/g, ''));
 			para.appendChild(node);
 			var element = document.getElementById("main");
 			element.appendChild(para);
