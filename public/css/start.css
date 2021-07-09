@@ -22,12 +22,13 @@ h2{
 	text-align: center;
 	font-family: 'Itim';
 }
+
 button{
 	width: 50%;
 	padding: 15px;
 	margin: 10px;
 	border-radius: 25px;
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: bold;
 	border-bottom:5px solid #de8d47;
 }
@@ -75,13 +76,13 @@ footer p{
 @media only screen and (max-width: 768px)
 {
 	h2{
-		font-size: 20px;
+		font-size: 23px;
 		margin: 10px;
 	}
 	button{
 		width:80%;
 		padding: 10px;
-		font-size: 16px;
+		font-size: 20px;
 	}
 	
 }
